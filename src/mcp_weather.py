@@ -15,7 +15,7 @@ def get_weather(city: str) -> dict[str, Any]:
     # Load environment variables. Assumes that project contains .env file with API keys
     load_dotenv()
     #---- Set OpenAI API key 
-    # Change environment variable name from "OPENAI_API_KEY" to the name given in 
+    # Change environment variable name from "OPEN_WEATHER_API_KEY" to the name given in 
     # your .env file.
 
     api_key = os.getenv("OPEN_WEATHER_API_KEY")
