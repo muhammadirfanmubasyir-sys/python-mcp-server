@@ -42,6 +42,7 @@ Starting MCP inspector...
 
 🌐 Opening browser...
 New STDIO connection request
+(see mcp-weather.png)
 
 {
 location:
