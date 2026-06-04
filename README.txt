@@ -13,6 +13,7 @@ Open Weather API Key: https://home.openweathermap.org/api_keys
 pip install "mcp[cli]"
 pip install requests
 pip install uv 
+pip install python-dotenv
 
 INSTALL uv in windows (https://docs.astral.sh/uv/)
 ==================================================
@@ -22,7 +23,6 @@ RESULT: [uv.exe, uvw.exe, uvx.exe] IN C:\Users\LENOVO L13 YOGA\.local\bin
 ========================
 RUN
 ===
-mcp dev src/mcp_weather.py
 
 uv run mcp dev src/mcp_weather.py
 ========================

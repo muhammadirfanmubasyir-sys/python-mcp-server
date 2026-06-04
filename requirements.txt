@@ -1,3 +1,4 @@
 mcp[cli]
 requests
 uv
+python-dotenv

@@ -1,4 +1,5 @@
 from typing import Any
+from dotenv import load_dotenv
 from mcp.server.fastmcp import FastMCP
 import requests
 import os
@@ -6,14 +7,19 @@ import os
 # Initialize FastMCP server
 mcp = FastMCP("weather", dependencies=["requests"])
 
-
 @mcp.tool()
 def get_weather(city: str) -> dict[str, Any]:
     """Get current weather for a location"""
     # Using https://openweathermap.org/current#geo
 
-    #api_key = os.getenv("OPENWEATHER_API_KEY")
-    api_key = "c8ddf7f5f752db3c0c99b9d7d80c1990"
+    # Load environment variables. Assumes that project contains .env file with API keys
+    load_dotenv()
+    #---- Set OpenAI API key 
+    # Change environment variable name from "OPENAI_API_KEY" to the name given in 
+    # your .env file.
+
+    api_key = os.getenv("OPEN_WEATHER_API_KEY")
+    print(f"OPEN_WEATHER_API_KEY : {api_key}")
     
     # Get the latitude and longitude of the city.
     geo_url = (
